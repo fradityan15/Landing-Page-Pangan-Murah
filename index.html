@@ -12,18 +12,21 @@
 </head>
 <body>
     <header>
-        <nav class="container">
-            <div class="logo">Pangan<span>Murah</span></div>
-            <ul class="nav-links">
-                <li><a href="#features">Fitur</a></li>
-                <li><a href="map.html">Jelajahi Peta</a></li>
-                <li><a href="partnership.html">Kemitraan Resto</a></li>
-                <li><a href="#testimoni">Testimoni</a></li>
-            </ul>
-            <div class="nav-auth">
-                <a href="register.html" class="btn-primary">Daftar Gratis</a>
-            </div>
-        </nav>
+    <nav class="container nav-wrapper">
+        <div class="logo">Pangan<span>Murah</span></div>
+        
+        <button class="menu-toggle" @click="isMenuOpen = !isMenuOpen">
+            <span v-if="!isMenuOpen">☰</span>
+            <span v-else style="color: var(--secondary)">✕</span>
+        </button>
+
+        <ul class="nav-links" :class="{ 'active': isMenuOpen }">
+            <li><a href="#features" @click="isMenuOpen = false">Fitur</a></li>
+            <li><a href="pages/map.html">Jelajahi Peta</a></li>
+            <li><a href="pages/partnership.html">Kemitraan Resto</a></li>
+            <li><a href="pages/login.html" class="mobile-login-btn">Masuk / Daftar</a></li>
+        </ul>
+    </nav>
     </header>
 
     <main>

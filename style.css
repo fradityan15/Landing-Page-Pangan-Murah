@@ -442,41 +442,70 @@ footer {
     }
 }
 
-/* Smartphone Portrait (Layar sangat kecil) */
-@media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 2rem;
+/* Perbaikan Navigasi Mobile agar tidak Tabrakan */
+@media (max-width: 480px) {
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
     }
 
-    .badge-discount {
-        padding: 8px 16px;
-        font-size: 1rem;
-        right: 10px;
-        top: 10px;
+    /* Sembunyikan tombol Daftar yang nabrak di pojok kanan atas */
+    .nav-auth {
+        display: none !important;
     }
 
-    .form-group {
-        flex-direction: column; /* Input dan tombol jadi atas-bawah */
+    /* Ukuran Logo yang pas di HP */
+    .logo {
+        font-size: 1.3rem !important;
+        z-index: 1002;
     }
 
-    .form-group input {
-        width: 100%;
+    /* Tombol Hamburger */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+        z-index: 1002;
     }
 
-    .feature-card {
-        padding: 25px;
-    }
-
-    .footer-content {
+    /* Daftar Menu Dropdown / Slide */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Sembunyi di kanan */
+        width: 80%;
+        height: 100vh;
+        background: #1e293b; /* Warna solid agar tidak transparan */
         flex-direction: column;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.4s ease-in-out;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        z-index: 1001;
     }
 
-    .footer-links {
+    .nav-links.active {
+        right: 0; /* Muncul ke layar */
+    }
+
+    .mobile-login-btn {
+        background: var(--primary);
+        color: white !important;
+        padding: 10px 30px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    /* Perbaikan Hero Section (Teks agar tidak terpotong) */
+    .hero-content h1 {
+        font-size: 1.8rem !important;
         margin-top: 20px;
-    }
-
-    .footer-links a {
-        margin: 0 10px;
     }
 }
