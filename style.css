@@ -133,3 +133,68 @@ footer { background: #080d1a; padding: 60px 0 20px; border-top: 1px solid rgba(2
 .footer-links-group ul li a { color: var(--text-muted); text-decoration: none; transition: 0.3s; }
 .footer-links-group ul li a:hover { color: var(--primary); }
 .social-icons a { margin-right: 10px; text-decoration: none; font-size: 1.2rem; }
+
+/* --- MOBILE RESPONSIVE FIX --- */
+@media (max-width: 991.98px) {
+    /* 1. Navbar Mobile */
+    .navbar-dark-custom {
+        padding: 10px 0 !important; /* Mengurangi kegemukan navbar sesuai gambar inspeksi */
+    }
+
+    .navbar-collapse {
+        background: var(--surface); /* Memberi warna background pada menu dropdown agar tidak transparan */
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0 !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    /* 2. Hero Section Mobile */
+    .hero {
+        flex-direction: column-reverse; /* Gambar di atas, teks di bawah agar lebih fokus */
+        text-align: center;
+        padding: 40px 0;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* Ukuran teks judul lebih kecil supaya tidak memenuhi layar */
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 3. Button & Form Mobile */
+    .btn-primary-custom {
+        width: 100%; /* Tombol jadi full width agar mudah ditekan jempol */
+        justify-content: center;
+    }
+
+    .form-group-custom {
+        flex-direction: column; /* Input email dan tombol gabung jadi bertumpuk */
+    }
+
+    /* 4. Login & Register Box Mobile */
+    .login-box, .register-box {
+        padding: 25px !important; /* Mengurangi padding dalam agar box tidak terlalu sempit di layar HP */
+        border-radius: 20px !important;
+    }
+
+    .input-row {
+        flex-direction: column; /* Password dan Konfirmasi jadi atas-bawah */
+        gap: 0;
+    }
+}
