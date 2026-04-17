@@ -1,41 +1,56 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pangan Murah | Makan Enak, Hemat, Selamatkan Bumi</title>
-    <meta name="description" content="Solusi cerdas penyelamat makanan surplus untuk mahasiswa dan pahlawan lingkungan.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pangan Murah - Solusi Cerdas Kurangi Food Waste</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-    <nav class="container nav-wrapper">
-        <div class="logo">Pangan<span>Murah</span></div>
-        
-        <button class="menu-toggle" @click="isMenuOpen = !isMenuOpen">
-            <span v-if="!isMenuOpen">☰</span>
-            <span v-else style="color: var(--secondary)">✕</span>
-        </button>
 
-        <ul class="nav-links" :class="{ 'active': isMenuOpen }">
-            <li><a href="#features" @click="isMenuOpen = false">Fitur</a></li>
-            <li><a href="pages/map.html">Jelajahi Peta</a></li>
-            <li><a href="pages/partnership.html">Kemitraan Resto</a></li>
-            <li><a href="pages/login.html" class="mobile-login-btn">Masuk / Daftar</a></li>
-        </ul>
-    </nav>
+    <header class="navbar-dark-custom sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom">
+            <div class="container">
+                <a class="navbar-brand logo-custom" href="#">Pangan <span>Murah</span></a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="map.html">Jelajahi Peta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="partnership.html">Kemitraan Resto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="donation.html">Donasi Resto</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="nav-link btn-primary-custom" href="login.html">Masuk/Daftar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
         <section class="hero container">
             <div class="hero-content">
                 <h1>Nikmati Makanan Enak, <br><span class="highlight">Hemat Kantong,</span> Selamatkan Bumi.</h1>
-                <p>Dapatkan akses ke makanan berkualitas dari restoran dan bakery favoritmu dengan harga mulai dari <strong>Rp10.000</strong>. Makan kenyang tanpa takut dompet tipis di akhir bulan.</p>
+                <p>Dapatkan akses ke makanan berkualitas dari restoran dan bakery favoritmu dengan harga mulai dari <strong>Rp10.000</strong>.</p>
                 <div class="hero-cta">
-                    <a href="#" class="btn-primary shadow">Amankan Makanan Sekarang</a>
+                    <a href="#" class="btn-primary-custom main-btn">Amankan Makanan Sekarang</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -56,12 +71,12 @@
                     <article class="feature-card shadow">
                         <div class="icon">🌍</div>
                         <h3>Penyelamat Bumi</h3>
-                        <p>Setiap makanan yang kamu beli membantu mengurangi limbah makanan dan jejak karbon.</p>
+                        <p>Setiap makanan yang kamu beli membantu mengurangi limbah makanan.</p>
                     </article>
                     <article class="feature-card shadow">
                         <div class="icon">📍</div>
                         <h3>Lokasi Terdekat</h3>
-                        <p>Cari promo makanan di sekitarmu dengan peta interaktif yang akurat dan real-time secara instan.</p>
+                        <p>Cari promo makanan di sekitarmu dengan peta interaktif secara instan.</p>
                     </article>
                 </div>
             </div>
@@ -69,63 +84,54 @@
 
         <section id="testimoni" class="container testimonial-section">
             <div class="testimonial-card shadow">
-                <p>"Sebagai mahasiswa yang tinggal di Cipatat, aplikasi ini bener-bener penyelamat akhir bulan! Makanannya masih fresh, enak, dan harganya gak masuk akal murahnya."</p>
+                <p>"Aplikasi ini bener-bener penyelamat akhir bulan! Makanannya masih fresh dan harganya murah banget."</p>
                 <cite>— Indah, Mahasiswa & Food Rescue Hero</cite>
             </div>
             
             <div class="cta-form shadow">
                 <h3>Mau info promo terbaru?</h3>
-                <p>Bergabunglah dengan 1.000+ pahlawan pangan lainnya.</p>
-                <form action="#" class="form-group">
+                <form action="#" class="form-group-custom">
                     <input type="email" placeholder="Masukkan email kamu..." required>
-                    <button type="submit" class="btn-primary">Gabung Sekarang</button>
+                    <button type="submit" class="btn-primary-custom">Gabung</button>
                 </form>
             </div>
         </section>
     </main>
 
     <footer>
-    <div class="container footer-grid">
-        <div class="footer-brand">
-            <div class="logo">Pangan<span>Murah</span></div>
-            <p>Solusi cerdas kurangi food waste dengan harga yang bersahabat bagi kantong mahasiswa dan warga Indonesia.</p>
-            <div class="social-icons">
-                <a href="#"><span>📸</span></a> <a href="#"><span>🐦</span></a>
-                <a href="#"><span>📘</span></a>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-custom">Pangan<span>Murah</span></div>
+                <p>Solusi cerdas kurangi food waste bagi kantong mahasiswa dan warga Indonesia.</p>
+            </div>
+
+            <div class="footer-links-group">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#">Jelajahi Peta</a></li>
+                    <li><a href="#">Kemitraan Resto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group">
+                <h4>Bantuan</h4>
+                <ul>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-group">
+                <h4>Kontak</h4>
+                <p>📍 Cipatat, Bandung Barat</p>
+                <p>📧 halo@panganmurah.com</p>
             </div>
         </div>
-
-        <div class="footer-links-group">
-            <h4>Layanan</h4>
-            <ul>
-                <li><a href="map.html">Jelajahi Peta</a></li>
-                <li><a href="partnership.html">Kemitraan Resto</a></li>
-                <li><a href="#">Donasi Pangan</a></li>
-            </ul>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Kelompok 2 UT. Dibuat dengan ❤️</p>
         </div>
+    </footer>
 
-        <div class="footer-links-group">
-            <h4>Bantuan</h4>
-            <ul>
-                <li><a href="#">Pusat Bantuan</a></li>
-                <li><a href="#">Cara Kerja</a></li>
-                <li><a href="#">Syarat & Ketentuan</a></li>
-                <li><a href="#">Kebijakan Privasi</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-links-group">
-            <h4>Kontak Kami</h4>
-            <p>📍 Cipatat, Bandung Barat</p>
-            <p>📧 halo@panganmurah.com</p>
-            <p>📞 +62 812-3456-7890</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom text-center">
-        <p>&copy; 2026 Kelompok 2 UT. Dibuat dengan ❤️ untuk Indonesia yang lebih hijau.</p>
-    </div>
-</footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
